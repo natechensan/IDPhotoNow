@@ -1,0 +1,7 @@
+{
+  "name": "ID Photo Now!",
+  "description": "Create professional ID and passport photos instantly. Features intelligent cropping, automatic background removal, and AI-powered compliance checks.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
