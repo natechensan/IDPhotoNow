@@ -1,20 +1,49 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ID Photo Now! 📸
 
-# Run and deploy your AI Studio app
+ID Photo Now! is a privacy-first, client-side web application that allows users to create professional-quality passport and ID photos directly in their browser. It combines intuitive cropping tools with AI-powered background removal to generate compliant photos for various countries.
 
-This contains everything you need to run your app locally.
+## ✨ Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Ax5tv4BXQSpZQz8NfmiVTIZAu9zQmY4j
+*   **ID Presets:** One-click configuration for standard ID sizes, including:
+    *   🇺🇸 U.S. Passport/Visa
+    *   🇯🇵 Japanese Passport/Visa
+    *   🇨🇳 Chinese Passport/Visa
+    *   🇬🇧 UK Passport/Visa
+    *   🇪🇺 EU/Schengen Visa
+    *   🇮🇳 Indian Passport/Visa
+*   **Smart Editing Tools:**
+    *   Precise cropping, zooming, and rotation.
+    *   "Face Guide" overlay to ensure correct head positioning.
+*   **AI Background Removal:** Instantly removes image backgrounds and replaces them with white (standard for ID photos) using WebAssembly.
+*   **4×6 Print Layout Generator:** Automatically tiles the cropped photo onto a standard 4x6 inch (10x15cm) canvas. It optimizes for landscape vs. portrait orientation to fit the maximum number of copies and includes crop marks for easy cutting.
+*   **Privacy First:** All image processing (cropping, AI background removal, layout generation) happens locally in your browser. **Your photos are never uploaded to a server.**
 
-## Run Locally
+## 🛠️ Tech Stack
 
-**Prerequisites:**  Node.js
+*   **Framework:** React (v18), TypeScript
+*   **Styling:** Tailwind CSS
+*   **Cropping:** `react-easy-crop`
+*   **AI Engine:** `@imgly/background-removal` (runs client-side via WASM)
+*   **Icons:** `lucide-react`
 
+## 🚀 Usage
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1.  **Upload:** Select a photo from your device or drag and drop an image.
+2.  **Select Region:** Choose the ID preset for your target country from the sidebar (e.g., U.S. Passport).
+3.  **Adjust:**
+    *   Use the **Face Guide** to align the head within the oval.
+    *   Use the Zoom and Rotate sliders to perfect the composition.
+4.  **Remove Background (Optional):** Click **"Remove Background"** to automatically isolate the subject and apply a white background.
+5.  **Download:**
+    *   **Download Single Photo:** Saves the single cropped image.
+    *   **4×6 Print:** Generates a high-resolution tiled sheet ready for printing on standard photo paper.
+
+## ⚠️ Printing Note
+
+The **4×6 Print** feature creates a layout at **300 DPI**. When printing:
+1.  Use standard 4x6 inch (10x15cm) photo paper.
+2.  Ensure your printer settings are set to "100% Scale" or "Do Not Scale" to maintain the correct physical dimensions of the ID photos.
+
+## 📄 License
+
+[MIT](LICENSE)
