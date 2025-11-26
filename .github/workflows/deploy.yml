@@ -26,9 +26,12 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+          # cache-dependency-path is strictly needed for npm ci if lockfile is missing, 
+          # disabling cache temporarily or using npm install avoids the error.
 
       - name: Install dependencies
-        run: npm ci
+        # 'npm ci' requires package-lock.json. 'npm install' works without it.
+        run: npm install
 
       - name: Build
         run: npm run build
