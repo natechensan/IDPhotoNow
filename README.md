@@ -2,6 +2,10 @@
 
 ID Photo Now! is a privacy-first, client-side web application that allows users to create professional-quality passport and ID photos directly in their browser. It combines intuitive cropping tools with AI-powered background removal to generate compliant photos for various countries.
 
+[Try it here](https://natechensan.github.io/IDPhotoNow/)
+
+Disclaimer: not affiliated with www.idphotonow.com (which was launched after this tool anyway)
+
 ## ✨ Features
 
 *   **ID Presets:** One-click configuration for standard ID sizes, including:
